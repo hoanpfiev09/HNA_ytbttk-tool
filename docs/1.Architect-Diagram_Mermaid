@@ -1,0 +1,11 @@
+##Mermaid 
+
+ graph TD
+    A[User Input] --> B[Input Handler]
+    B --> C[Video Downloader]
+    C --> D[Video Converter]
+    D --> E[Uploader]
+    B --> F[Logger]
+    C --> F
+    D --> F
+    E --> F 

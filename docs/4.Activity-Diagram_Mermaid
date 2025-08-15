@@ -1,0 +1,10 @@
+
+ flowchart TD
+    A[Start] --> B[Receive YouTube URL]
+    B --> C[Validate Input]
+    C --> D[Download Video]
+    D --> E[Convert to MP4]
+    E --> F[Check Duration < 10min]
+    F --> G[Upload to TikTok]
+    G --> H[Log Result]
+    H --> I[End] 

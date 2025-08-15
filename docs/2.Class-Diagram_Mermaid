@@ -1,0 +1,33 @@
+
+ classDiagram
+    class InputHandler {
+        +validateInput()
+        +getURL()
+    }
+
+    class VideoDownloader {
+        +downloadVideo(url)
+    }
+
+    class VideoConverter {
+        +convertToMP4(video)
+        +checkDuration(video)
+    }
+
+    class Uploader {
+        +loginTikTok()
+        +uploadVideo(video)
+    }
+
+    class Logger {
+        +logEvent(event)
+        +logError(error)
+    }
+
+    InputHandler --> VideoDownloader
+    VideoDownloader --> VideoConverter
+    VideoConverter --> Uploader
+    InputHandler --> Logger
+    VideoDownloader --> Logger
+    VideoConverter --> Logger
+    Uploader --> Logger 

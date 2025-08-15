@@ -1,0 +1,17 @@
+
+ sequenceDiagram
+    participant User
+    participant InputHandler
+    participant VideoDownloader
+    participant VideoConverter
+    participant Uploader
+    participant Logger
+
+    User->>InputHandler: Provide YouTube URL
+    InputHandler->>Logger: Log input
+    InputHandler->>VideoDownloader: Pass validated URL
+    VideoDownloader->>Logger: Log download start
+    VideoDownloader->>VideoConverter: Pass raw video
+    VideoConverter->>Logger: Log conversion
+    VideoConverter->>Uploader: Pass MP4 video
+    Uploader->>Logger: Log upload status 
